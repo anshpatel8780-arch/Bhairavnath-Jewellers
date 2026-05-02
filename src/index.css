@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-gray-200 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-white;
+  }
+}
+
+html {
+  background-color: #050505;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Luxury OTP Box Glow */
+input:focus {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.15) !important;
+}
+
+/* Smooth Mode Transitions */
+.mode-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.mode-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms, transform 500ms;
+}
+
+/* Chrome/Safari autofill styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #000000 inset !important;
+    -webkit-text-fill-color: white !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
